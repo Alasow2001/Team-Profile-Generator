@@ -2,7 +2,7 @@
 const addEmployeequestions = [
     {
         type: 'list',
-        name: '',
+        name: 'employee',
         message: 'What would you like to do?',
         choices: ['Add an engineer', 'Add an Intern', 'Add a manager', 'Build the team']
     }
