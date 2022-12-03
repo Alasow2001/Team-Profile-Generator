@@ -16,7 +16,6 @@ describe('Engineer', () => {
             expect(object.id).toEqual(id)
             expect(object.email).toEqual(email)
             expect(object.github).toEqual(github)
-            expect(object.role).toEqual(role)
 
             expect(object.getName().toEqual(name));
             expect(object.getId().toEqual(id));

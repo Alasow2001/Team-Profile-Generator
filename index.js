@@ -1,3 +1,3 @@
-const runOptions = require('./Questions/doQuestions')
+const runStartOptions = require('./src/doQuestions')
 
-runOptions();
+runStartOptions();

@@ -16,7 +16,7 @@ const managers = []
 const engineers = []
 const interns = []
 
-const runOptions = () => {
+const runStartOptions = () => {
     inquirer
     .prompt(questions.addEmployeequestions)
     .then((response) => {
@@ -52,7 +52,7 @@ const addManager = () => {
         const manager = new Manager(response.name, response.id, response.email, response.officeNumber)
         managers.push(manager)
         console.log(managers)
-        runOptions()
+        runStartOptions()
     })
 }
 
@@ -63,7 +63,7 @@ const addIntern = () => {
         const intern = new Intern(response.name, response.id, response.email, response.school)
         interns.push(intern)
         console.log(interns)
-        runOptions()
+        runStartOptions()
     })
 }
 
@@ -74,8 +74,8 @@ const addEngineer = () => {
         const engineer = new Engineer(response.name, response.id, response.email, response.github)
         engineers.push(engineer)
         console.log(engineers)
-        runOptions()
+        runStartOptions()
     })
 }
 
-module.exports = runOptions;
+module.exports = runStartOptions;

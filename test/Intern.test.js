@@ -15,7 +15,6 @@ describe('Intern', () => {
             expect(object.name).toEqual(name)
             expect(object.id).toEqual(id)
             expect(object.email).toEqual(email)
-            expect(object.role).toEqual(role)
             expect(object.school).toEqual(school)
 
             expect(object.getName().toEqual(name));
