@@ -19,27 +19,27 @@ const interns = []
 const runOptions = () => {
     inquirer
     .prompt(questions.addEmployeequestions)
-    .then((answer) => {
-        switch(answer.employee){
+    .then((response) => {
+        switch(response.option){
             case 'Add Manager':
                 addManager()
-            break;
+                break;
 
             case 'Add Engineer':
                 addEngineer()
-            break;
+                break;
 
             case 'Add Intern':
                 addIntern()
-            break;
+                break;
 
             case 'Build Team Page':
                 generatePage(managers, engineers, interns);
                 console.log('Building team generator page')
-            break
-
+                break;
+                
             default:
-                console.log('defeault')
+                console.log('default')
                 break;
         }
     })
@@ -48,9 +48,10 @@ const runOptions = () => {
 const addManager = () => {
     inquirer
     .prompt(questions.managerQuestions)
-    .then((answer) => {
-        const manager = new Manager(answer.name, answer.id, answer.email, answer.officeNumber)
-        Manager.push(manager)
+    .then((response) => {
+        const manager = new Manager(response.name, response.id, response.email, response.officeNumber)
+        managers.push(manager)
+        console.log(managers)
         runOptions()
     })
 }
@@ -58,9 +59,10 @@ const addManager = () => {
 const addIntern = () => {
     inquirer
     .prompt(questions.internQuestions)
-    .then((answer) => {
-        const intern = new Intern(answer.name, answer.id, answer.email, answer.school)
-        Intern.push(intern)
+    .then((response) => {
+        const intern = new Intern(response.name, response.id, response.email, response.school)
+        interns.push(intern)
+        console.log(interns)
         runOptions()
     })
 }
@@ -68,9 +70,10 @@ const addIntern = () => {
 const addEngineer = () => {
     inquirer
     .prompt(questions.engineerQuestions)
-    .then((answer) => {
-        const engineer = new Engineer(answer.name, answer.id, answer.email, answer.github)
-        Engineer.push(engineer)
+    .then((response) => {
+        const engineer = new Engineer(response.name, response.id, response.email, response.github)
+        engineers.push(engineer)
+        console.log(engineers)
         runOptions()
     })
 }
