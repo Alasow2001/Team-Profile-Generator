@@ -10,18 +10,18 @@ describe('Intern', () => {
             const role = 'Intern'
             const school = ''
 
-            const object = new Intern(id, name, email, school)
+            const object = new Intern(name, id, email, school)
 
             expect(object.name).toEqual(name)
             expect(object.id).toEqual(id)
             expect(object.email).toEqual(email)
             expect(object.school).toEqual(school)
 
-            expect(object.getName().toEqual(name));
-            expect(object.getId().toEqual(id));
-            expect(object.getEmail().toEqual(email));
-            expect(object.getRole().toEqual(role))
-            expect(object.getSchool().toEqual(school))
+            expect(object.getName()).toEqual(name);
+            expect(object.getId()).toEqual(id)
+            expect(object.getEmail()).toEqual(email)
+            expect(object.getRole()).toEqual(role)
+            expect(object.getSchool()).toEqual(school)
         }) 
     })
 })
