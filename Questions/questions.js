@@ -1,5 +1,3 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
 
 const addEmployeequestions = [
     {
@@ -87,4 +85,6 @@ const managerQuestions = [
         message: 'What is the managers id?'
     }
 ]
+
+module.exports = {addEmployeequestions, managerQuestions, engineerQuestions, internQuestions};
 
