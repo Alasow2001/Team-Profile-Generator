@@ -1,8 +1,8 @@
 const fs = require('fs');
 
-const Manager = require('../team_members/Manager')
-const Engineer = require('../team_members/Engineer')
-const Intern = require('../team_members/Intern')
+const Managers = require('../team_members/Manager')
+const Engineers = require('../team_members/Engineer')
+const Interns = require('../team_members/Intern')
 
 const generatePage = (managers, engineers, interns) => {
     let addTeamProfiles = fs.readFileSync('./template/index.html', 'utf8')

@@ -1,90 +1,90 @@
-
-const addEmployeequestions = [
+const addEmployeeQuestions = [
     {
         type: 'list',
         name: 'option',
         message: 'What would you like to do?',
-        choices: ['Add an engineer', 'Add an Intern', 'Add a manager', 'Build the team']
-    }
+        choices: ['Add an engineer', 'Add an Intern', 'Add a manager', 'Build the team'],
+    },
 ]
 
 const engineerQuestions = [
     {
         type: 'input',
         name: 'engineer',
-        message: 'What is the name of the engineer?'
-    },
-
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is the engineers email?'
+        message: 'What is the name of the engineer?',
     },
 
     {
         type: 'input',
         name: 'id',
-        message: 'What is the engineers id?'
+        message: 'What is the engineers id?',
+    },
+
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is the engineers email?',
     },
 
     {
         type: 'input',
         name: 'github',
-        message: 'What is their github username?'
-    }
+        message: 'What is their github username?',
+    },
 ]
 
 const internQuestions = [
     {
         type: 'input',
         name: 'intern',
-        message: 'What is the name of the intern?'
-    },
-
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is the interns email?'
+        message: 'What is the name of the intern?',
     },
 
     {
         type: 'input',
         name: 'id',
-        message: 'What is the interns id?'
+        message: 'What is the interns id?',
     },
 
     {
         type: 'input',
+        name: 'email',
+        message: 'What is the interns email?',
+    },
+
+
+    {
+        type: 'input',
         name: 'school',
-        message: 'What is the name of the interns school?'
-    }
+        message: 'What is the name of the interns school?',
+    },
 ]
 
 const managerQuestions = [
     {
         type: 'input',
         name: 'manager',
-        message: 'What is the name of the manager?'
-    },
-
-    {
-        type: 'input',
-        name: 'number',
-        message: 'What is the managers office number?'
-    },
-
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is the managers email?'
+        message: 'What is the name of the manager?',
     },
 
     {
         type: 'input',
         name: 'id',
-        message: 'What is the managers id?'
-    }
+        message: 'What is the managers id?',
+    },
+
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is the managers email?',
+    },
+
+    {
+        type: 'input',
+        name: 'number',
+        message: 'What is the managers office number?',
+    },
 ]
 
-module.exports = {addEmployeequestions, managerQuestions, engineerQuestions, internQuestions};
+module.exports = {addEmployeeQuestions, managerQuestions, engineerQuestions, internQuestions};
 
