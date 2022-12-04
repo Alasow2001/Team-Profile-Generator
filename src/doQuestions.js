@@ -6,7 +6,7 @@ const Manager = require('../team_members/Manager')
 const Intern = require('../team_members/Intern')
 const Engineer = require('../team_members/Engineer')
 
-const questions = require('./questions')
+const Questions = require('./questions')
 
 
 // Create arrrays of the respective roles
@@ -16,7 +16,7 @@ const interns = []
 
 const runStartOptions = () => {
     inquirer
-    .prompt(questions.addEmployeeQuestions)
+    .prompt(Questions.addEmployeeQuestions)
     .then((response) => {
         switch(response.option){
             case 'Add Manager':
@@ -44,7 +44,7 @@ const runStartOptions = () => {
 
 const addManager = () => {
     inquirer
-    .prompt(questions.managerQuestions)
+    .prompt(Questions.managerQuestions)
     .then((response) => {
         const manager = new Manager(response.name, response.id, response.email, response.officeNumber)
         managers.push(manager)
@@ -54,7 +54,7 @@ const addManager = () => {
 
 const addIntern = () => {
     inquirer
-    .prompt(questions.internQuestions)
+    .prompt(Questions.internQuestions)
     .then((response) => {
         const intern = new Intern(response.name, response.id, response.email, response.school)
         interns.push(intern)
@@ -64,7 +64,7 @@ const addIntern = () => {
 
 const addEngineer = () => {
     inquirer
-    .prompt(questions.engineerQuestions)
+    .prompt(Questions.engineerQuestions)
     .then((response) => {
         const engineer = new Engineer(response.name, response.id, response.email, response.github)
         engineers.push(engineer)
