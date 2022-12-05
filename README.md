@@ -26,11 +26,14 @@ THEN I exit the application, and the HTML is generated
 
 ## Installation
 
-This user must have node and npm test and inquirer installed before using this project
+This user must have node and npm test and inquirer installed before using this project. This can be done by running the following commands:
+
+npm init -y
+npm i inquirer@8.2.4
 
 ## Usage
 
-This can be used to create a team profile for various businesses
+The user can input the command: npm run start. This will then run the application and ask the user to build a professional team, adding managers, engineers, interns and then they can build a page for their team.
 
 ## Links
 
