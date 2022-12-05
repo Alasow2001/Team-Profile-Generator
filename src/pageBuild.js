@@ -4,6 +4,7 @@ const Managers = require('../team_members/Manager')
 const Engineers = require('../team_members/Engineer')
 const Interns = require('../team_members/Intern')
 
+// This will generate a page for all of the user inputs, creating div tags for each of the employee roles
 const generatePage = (managers, engineers, interns) => {
     let addTeamProfiles = fs.readFileSync('./template/index.html', 'utf8')
 
@@ -60,6 +61,7 @@ const generatePage = (managers, engineers, interns) => {
             `
         });
 
+        // This will replace the place holders with each of the employee roles
         addTeamProfiles = addTeamProfiles.replace('<!-- MANAGERS -->', managerHTML)
         addTeamProfiles = addTeamProfiles.replace('<!-- ENGINEERS -->', engineerHTML)
         addTeamProfiles = addTeamProfiles.replace('<!-- INTERNS -->', internHTML)

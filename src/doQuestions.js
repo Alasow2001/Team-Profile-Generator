@@ -14,6 +14,7 @@ const managers = []
 const engineers = []
 const interns = []
 
+// This will ask the user in the terminal which employee role they would like to add and then build a page
 const runStartOptions = () => {
     inquirer
     .prompt(Questions.addEmployeeQuestions)
@@ -42,6 +43,7 @@ const runStartOptions = () => {
     })
 }
 
+// This will run the questions for the manager
 const addManager = () => {
     inquirer
     .prompt(Questions.managerQuestions)
@@ -52,6 +54,7 @@ const addManager = () => {
     })
 }
 
+// This will run the questions for the intern
 const addIntern = () => {
     inquirer
     .prompt(Questions.internQuestions)
@@ -62,6 +65,7 @@ const addIntern = () => {
     })
 }
 
+// This will run the questions for the engineer
 const addEngineer = () => {
     inquirer
     .prompt(Questions.engineerQuestions)
