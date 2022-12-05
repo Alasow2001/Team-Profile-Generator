@@ -81,7 +81,7 @@ const managerQuestions = [
 
     {
         type: 'input',
-        name: 'number',
+        name: 'officeNumber',
         message: 'What is the managers office number?',
     },
 ]

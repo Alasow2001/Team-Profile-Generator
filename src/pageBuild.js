@@ -13,10 +13,10 @@ const generatePage = (managers, engineers, interns) => {
         managers.forEach(manager => {
             managerHTML += `
             <div class='box'>
-                <div class='box-header'>
+                <div class='manager-header'>
                     <h2>Manager</h2>
                 </div>
-                <div class='box-info'>
+                <div class='manager-info'>
                     <h3>Name: ${manager.name}</h3>
                     <p>ID: ${manager.id}</p>
                     <p>Email: ${manager.email}</p>
@@ -30,10 +30,10 @@ const generatePage = (managers, engineers, interns) => {
         engineers.forEach(engineer => {
             engineerHTML += `
             <div class='box'>
-                <div class='box-header'>
+                <div class='engineer-header'>
                     <h2>Engineer</h2>
                 </div>
-                <div class='box-info'>
+                <div class='engineer-info'>
                     <h3>Name: ${engineer.name}</h3>
                     <p>ID: ${engineer.id}</p>
                     <p>Email: ${engineer.email}</p>
@@ -47,10 +47,10 @@ const generatePage = (managers, engineers, interns) => {
         interns.forEach(intern => {
             internHTML += `
             <div class='box'>
-                <div class='box-header'>
+                <div class='intern-header'>
                     <h2>Intern</h2>
                 </div>
-                <div class='box-info'>
+                <div class='intern-info'>
                     <h3>Name: ${intern.name}</h3>
                     <p>ID: ${intern.id}</p>
                     <p>Email: ${intern.email}</p>
