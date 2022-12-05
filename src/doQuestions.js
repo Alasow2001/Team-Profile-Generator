@@ -19,19 +19,19 @@ const runStartOptions = () => {
     .prompt(Questions.addEmployeeQuestions)
     .then((response) => {
         switch(response.option){
-            case 'Add Manager':
+            case 'Add a Manager':
                 addManager()
                 break;
 
-            case 'Add Engineer':
+            case 'Add an Engineer':
                 addEngineer()
                 break;
 
-            case 'Add Intern':
+            case 'Add an Intern':
                 addIntern()
                 break;
 
-            case 'Build Team Page':
+            case 'Build the team':
                 generatePage(managers, engineers, interns);    
                 break;
 

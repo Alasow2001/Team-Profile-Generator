@@ -3,14 +3,14 @@ const addEmployeeQuestions = [
         type: 'list',
         name: 'option',
         message: 'What would you like to do?',
-        choices: ['Add an engineer', 'Add an Intern', 'Add a manager', 'Build the team'],
+        choices: ['Add an Engineer', 'Add an Intern', 'Add a Manager', 'Build the team'],
     },
 ]
 
 const engineerQuestions = [
     {
         type: 'input',
-        name: 'engineer',
+        name: 'name',
         message: 'What is the name of the engineer?',
     },
 
@@ -36,7 +36,7 @@ const engineerQuestions = [
 const internQuestions = [
     {
         type: 'input',
-        name: 'intern',
+        name: 'name',
         message: 'What is the name of the intern?',
     },
 
@@ -63,7 +63,7 @@ const internQuestions = [
 const managerQuestions = [
     {
         type: 'input',
-        name: 'manager',
+        name: 'name',
         message: 'What is the name of the manager?',
     },
 

@@ -9,7 +9,7 @@ const generatePage = (managers, engineers, interns) => {
 
     if(addTeamProfiles){
 
-        const managerHTML = '';
+        let managerHTML = '';
         managers.forEach(manager => {
             managerHTML += `
             <div class='box'>
@@ -17,7 +17,7 @@ const generatePage = (managers, engineers, interns) => {
                     <h2>Manager</h2>
                 </div>
                 <div class='box-info'>
-                    <h3>${manager.name}</h3>
+                    <h3>Name: ${manager.name}</h3>
                     <p>ID: ${manager.id}</p>
                     <p>Email: ${manager.email}</p>
                     <p>Office Number: ${manager.officeNumber}</p>
@@ -26,7 +26,7 @@ const generatePage = (managers, engineers, interns) => {
             `
         });
 
-        const engineerHTML = '';
+        let engineerHTML = '';
         engineers.forEach(engineer => {
             engineerHTML += `
             <div class='box'>
@@ -34,7 +34,7 @@ const generatePage = (managers, engineers, interns) => {
                     <h2>Engineer</h2>
                 </div>
                 <div class='box-info'>
-                    <h3>${engineer.name}</h3>
+                    <h3>Name: ${engineer.name}</h3>
                     <p>ID: ${engineer.id}</p>
                     <p>Email: ${engineer.email}</p>
                     <p>Github username: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
@@ -43,7 +43,7 @@ const generatePage = (managers, engineers, interns) => {
             `
         });
 
-        const internHTML = '';
+        let internHTML = '';
         interns.forEach(intern => {
             internHTML += `
             <div class='box'>
@@ -51,7 +51,7 @@ const generatePage = (managers, engineers, interns) => {
                     <h2>Intern</h2>
                 </div>
                 <div class='box-info'>
-                    <h3>${intern.name}</h3>
+                    <h3>Name: ${intern.name}</h3>
                     <p>ID: ${intern.id}</p>
                     <p>Email: ${intern.email}</p>
                     <p>School: ${intern.school}</p>
@@ -64,7 +64,7 @@ const generatePage = (managers, engineers, interns) => {
         addTeamProfiles = addTeamProfiles.replace('<!-- ENGINEERS -->', engineerHTML)
         addTeamProfiles = addTeamProfiles.replace('<!-- INTERNS -->', internHTML)
 
-        fs.writeFileSync("./dist/index.html", addTeamProfiles, 'utf8')
+        fs.writeFileSync("./dist/teamProfilePage.html", addTeamProfiles, 'utf8')
 
         console.log('Created profile page');
     }
